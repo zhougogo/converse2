@@ -1,0 +1,808 @@
+	background-color: #f00;
+/*通用样式*/
+
+html{
+	width: 100%;
+	height: 100%;
+	font-family: 'FZYTK.TTF'; 
+	
+}
+@font-face { 
+  font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/ 
+  src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/ 
+} 
+body{
+	width: 100%;
+	height: 100%;
+}
+input{
+	-webkit-appearance: none;
+	resize: none;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+	font-family: 'FZYTK.TTF';
+}
+img{
+	display: block;
+	width: 100%;
+}
+.pos{
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+
+.page{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	margin: auto;
+}
+.hidden{
+	display: none;
+}
+.face{
+	position: absolute;
+	z-index: 100;
+}
+/*第一页*/
+.pageBegin{
+	background: url(../img/loading/loading-bg.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.pageBegin img{
+	position: absolute;
+	width: 91%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	}
+
+
+.page1 .shone{
+	width: 100%;
+
+
+}
+.page1 .loadText{
+	top: 62.3%;
+	text-align: center;
+	color: white;
+
+	font-size: 4.5vw;
+	font-family: 'FZYTK.TTF'; 
+}
+
+/*第二页*/
+/*.page2{
+	width: 100%;
+}
+.page2 img{
+	width: 100%;
+	height: 100%;
+}
+.page2 .btm{
+	position: absolute;
+	width: 32%;
+	top: 82%;
+	display: none;
+}
+.page2 .lBtm{
+	left: 10%;
+}
+.page2 .sayBtm{
+	right: 10%;
+}*/
+.page2 .top,.page2 .bottom{
+	width: 100%;
+	position: absolute;
+	height: 100%;
+}
+.page2 .top img,.page2 .bottom img{
+	width: 100%;
+	height: 100%;
+}
+.page2 .top{
+	top: 0%;
+	background: url(../img/mode/men.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.page2 .bottom{
+	top: 100%;
+	background: url(../img/mode/text.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.page2 .bottom .btm{
+	position: absolute;
+	width: 32%;
+	top: 82%;
+}
+.page2 .bottom .lBtm{
+	left: 10%;
+}
+.page2 .bottom .sayBtm{
+	right: 10%;
+}
+
+/*第三页*/
+/*第三页*/
+.page3,.page33{
+	font-family: 'FZYTK.TTF';
+	alignment-baseline: alphabetic;
+	width: 100%;
+	height: 100%;
+}
+.page3 .container{
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+.page3 .bg,.page33 .bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+.page3 .bg img,.page33 .bg img{
+	width: 100%;
+	height: 100%;
+}
+
+.page3Body img{
+	width: 20%;
+	position: absolute;
+	top: 50vw;
+	left: 39.5vw
+}
+.personInfo{
+	top: 61%;
+}
+.personInfo3{
+	top: 60%;
+}
+.page33 .page33Container{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.personInfo,.personInfo3{
+	position: absolute;
+
+	font-size: 3.4vw;
+	color: #fff;
+	background-size: 100%;
+	width: 80%;
+}
+.personInfo img{
+	width: 80%;
+}
+.personInfo p,.personInfo3 p{
+	line-height: 4.6vw;
+	margin-left: 9vw;
+
+}
+.personInfo3 p{
+	line-height: 4.6vw;
+}
+.personInfo p .believeText{
+	width: 52%;
+}
+.personInfo p .noBelieveText{
+	width: 20%;
+}
+.personInfo p .noBelieveText{
+	width: 28%;
+}
+.personInfo p .conText{
+	width: 32%;
+}
+.face .personInfo p:last-child{
+	line-height: 4.2vw;
+	margin-left: 17vw;
+	position: absolute;
+	top: 114%;
+}
+.clip .personInfo p:last-child{
+	margin-left: 10vw;
+}
+.page33 .personInfo p:last-child{
+	top: 100%;
+	line-height: 4.2vw;
+	margin-left: 17vw;
+	position: absolute;
+}
+.personInfo2,.personInfo4{
+	position: absolute;
+	top: 56%;
+	font-size: 4.2vw;
+
+	color: #fff;
+	background-size: 100%;
+	width: 80%;
+	height: 40%;
+
+}
+
+.personInfo2 .top,.personInfo4 .top{
+	position: absolute;
+	top: 12%;
+	left: 30%;
+}
+.personInfo2 .bottom,.personInfo4 .bottom{
+	position: absolute;
+	top: 44%;
+	/*bottom: 20%;*/
+	left: 30%;
+}
+.page33 .personInfo4{
+	top: 56%;
+}
+.personInfo2 input{
+	border:none;
+	outline: none;
+	background-color:#183d8e; 
+	border-bottom:1px solid white;
+	width: 20%;
+	color: white;
+	font-size: 4.2vw;
+
+
+}
+.page3Container .cueText{
+	width: 46%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
+	background: url(../img/hbg.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	font-size: 4vw;
+	line-height: 34px;
+	color: #183d8e;
+	display: none;
+	font-weight: bold;
+	text-align: center;
+}
+.personInfo2 .top p{
+	line-height: 6vw;
+}
+.personInfo2 .bottom p{
+	line-height: 6vw;
+}
+.page33{
+	position: absolute;
+	z-index: -10;
+}
+.page33 .personInfo3 p:last-child{
+	top: 97%;
+	left: 8%;
+}
+.page33 .personInfo3 .lastText{
+	
+	top: 97%;
+	position: absolute;
+}
+.page33 .logo{
+	width: 40%;
+	top: 88%;
+}
+.page33 .logo img{
+	width: 100%;
+}
+.personInfo input{
+
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	color: #fff;
+}
+.footerBtn img{
+	position: absolute;
+	bottom: 5vw;
+	width: 25%;
+}
+.footerBtnLeft{
+	left: 5vw;
+}
+.footerBtnRight{
+	right: 5vw;
+}
+/*第三页模态框*/
+.page3,.page33{
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+.page3 .popup{
+	/*background: url("../img/photoword/p3-tut.png") no-repeat center center;*/
+	/*background-size: 100% 100%;*/
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.page3 .popup .activity{
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+	top: 92%;
+
+
+}
+.page3 .popup .hall{
+	position: absolute;
+	width: 30%;
+	left: 52%;
+	top: 31%;
+	animation:activity .5s linear;
+}
+.page3 .popup .hpic{
+	width: 100%;
+
+
+}
+.page3 .popup .side{
+	width: 30%;
+	position: absolute;
+	left: 52%;
+	top: 31%;
+	display: none;
+	
+}
+.sideAni{
+	animation:activity .5s linear;
+}
+@keyframes activity{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 30%;
+	}
+}
+.page3 .popup label{
+	z-index: 100;
+	position: absolute;
+	left: 43%;
+	top: 22%;
+	width: 12%;
+}
+
+.page3 .popup2{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: url("../img/photoword/p3-tut2.png") no-repeat center center;
+	background-size: 100% 100%;
+}
+
+
+.page3 .pic,.page33 .pic{
+	position: absolute;
+	left: 43.1%;
+	top: 8%;
+	width: 12%;
+	height: 36%;
+	z-index: -1;
+	/*background: red;*/
+}
+.page33{
+	position: absolute;
+	z-index: -5;
+}
+/*第四页*/
+.page4 .bg{
+
+	top: 0%;
+	bottom: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	pointer-events: none;
+	
+}
+.page4 .bg img{
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	
+}
+.page4 .cBtm{
+	position: absolute;
+	width: 20%;
+	top: 84%;
+	z-index: 200;
+}
+.page4 .backBtm{
+	left: 10%;
+}
+.page4 .goBtm{
+	right: 10%;
+}
+.page4 .logo{
+	position: absolute;
+	width: 30%;
+	z-index: 16;
+	left: 40%;
+	top: 41%;
+	pointer-events:none;
+	opacity: 1;
+}
+.logoHand{
+	animation:logo .5s linear;
+}
+@keyframes logo{
+	from{
+		opacity: 0.5;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.page4 .headText{
+	position: absolute;
+	width: 40%;
+	z-index: 10;
+	left: 54%;
+	top: 54%;
+}
+.logoText{
+	animation: headText 0.5s linear;
+}
+@keyframes headText{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 40%;
+	}
+}
+.page4 .picture{
+
+	height: 50%;
+	margin-top: 21%;
+	/*z-index: 1000;*/
+
+	
+
+
+}
+
+/*page33页*/
+.page33 span{
+	display: inline-block;
+	
+}
+.page33 p{
+	position: relative;
+	margin-top: 1px;
+}
+
+.spanText{
+
+	color: #183d8e;
+	margin:0px 1px ;
+	padding: 0px 1px;
+
+}
+.spanText7{
+
+}
+.spanText{
+
+	display: inline-block;
+
+	/*height: 4.6vw;*/
+	/*position: absolute;*/
+
+
+	
+}
+
+.bac6{
+	display: inline-block;
+	width: 50%;
+	height: 4.8vw;
+}
+.bac6 img{
+	width: 100%;
+	height: 100%;
+}
+
+/*第五页*/
+.page5{
+	position: absolute;
+	z-index: 1000;
+}
+.page5 .bf{
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+.page5 .bf img{
+	width: 100%;
+	height: 100%;
+}
+/*第六页*/
+
+.page6{
+	background: url(../img/poster/bg.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.page6 .center{
+	width: 80%;
+	height:  78%;
+	top: 10%;
+	background-color: white;
+}
+.page6 .center canvas{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.page6 .center img{
+	width: 100%;
+	height: 100%;
+}
+.page6 .erweima{
+	width: 16%;
+	position: absolute;
+	top: 78%;
+	left: 14%;
+}
+.page6 .copy{
+	width: 44%;
+	position: absolute;
+	top: 88%;
+	left: 5%;
+}
+.page6 .link{
+	width: 36%;
+	position: absolute;
+	top: 92%;
+	right: 10%;
+}
+
+
+.personInfo .text1{
+	width: 17%;
+}
+.personInfo .text2{
+	width: 8%;
+}
+.personInfo .text3{
+	width: 13%;
+}
+
+.personInfo .text4{
+	width: 18%;
+}
+
+.personInfo .text5{
+	width: 18%;
+}
+.personInfo .text6{
+	width: 44%;
+}
+.personInfo .text7{
+	width: 36%;
+}
+.page3 .personInfo2 .text1{
+	width: 36%;
+}
+.page3 .personInfo2 .text2{
+	width: 36%;
+}
+.page3 .personInfo2 .text3{
+	width: 58%;
+}
+/*....提交表单...*/
+
+#submitBtm{
+	display: none;
+}
+.page3 .formBtm{
+	position: absolute;
+}
+.page3 .personInfo .lastText,.page3 .personInfo2 .lastText{
+	left: 8%;
+	top: 110%;
+	position: absolute;
+}
+.page3 .personInfo{
+	position: absolute;
+	left: 4%;
+}
+.page3 .personInfo2 .top{
+	left: 24%;
+}
+.page3 .personInfo2 .bottom{
+	left: 28%;
+
+}
+.page3 .popup2 .modal2{
+	position: absolute;
+	width: 10%;
+	top: 62%;
+	left: 30%;
+	z-index: 100;
+}
+.page3 .popup2 .inputText{
+	position: absolute;
+	width: 26%;
+	left: 36%;
+	top: 67%;
+}
+.ani{
+	animation:inputText .5s linear;
+}
+@keyframes inputText{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 26%;
+	}
+}
+/*加载页*/
+.loading{
+	position: absolute;
+	z-index: 999;
+}
+.loading img{
+	width: 100%;
+	height: 100%;
+}
+/*图片加载*/
+.poster{
+	background: url(../img/poster/bg.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.poster img{
+	width: 100%;
+	height: 100%;
+}
+.poster .center{
+	width: 80%;
+	height:  78%;
+	top: 10%;
+
+}
+.poster .frame{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(1.2);
+	background: url(../img/poster/camerablue.png) no-repeat;
+	background-size: 100% 100%;
+	animation: frame 1s linear;
+	animation-delay: 3.5s;
+}
+.poster .copy{
+	width: 44%;
+	position: absolute;
+	top: 88%;
+	left: 5%;
+	display: none;
+}
+.poster .link{
+	width: 36%;
+	position: absolute;
+	top: 92%;
+	right: 10%;
+	display: none;
+}
+.mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: none;
+}
+
+@keyframes frame{
+	0%{
+		transform: scale(2);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	60%{
+		background: url(../img/poster/camerablue.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	70%{
+		background: url(../img/poster/camerawhite.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	80%{
+		background: url(../img/poster/camerablue.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	90%{
+		background: url(../img/poster/camerawhite.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	100%{
+		background: url(../img/poster/camerablue.png) no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+.page4 .popup{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: rgba(0,0,0,0.4);
+	
+}
+
+.clip .erwerma{
+	position: absolute;
+	width: 30%;
+	top: 90%;
+	left: 3%;
+}
+.clip .text{
+	color: #183d8e;
+}
+.clip{
+	position: absolute;
+	
+}

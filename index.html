@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1, maximum-scale=1,,user-scalable=no">
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<title>converse</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/index.css" />
+
+	</head>
+
+	<body>
+		<div class="page page1 pageBegin">
+			<img src="img/loading/loading2-fix.gif">
+		</div>
+		<div class="page page2 hidden" id="page2">
+			<div class="top">
+
+			</div>
+
+			<div class="bottom">
+				<a href="cold.html" class="lBtm btm"><img src="img/mode/lBtm.png" /></a>
+				<a href="gramophone.html" class="sayBtm btm"><img src="img/mode/sayBtm.png" /></a>
+			</div>
+			<div class="popup">
+
+			</div>
+
+		</div>
+
+	</body>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var page2 = document.getElementById('page2');
+
+		page2.addEventListener('touchmove', function(e) {
+
+			e.preventDefault();
+
+		});
+		setTimeout(function() {
+			$(".page1").hide();
+			$(".page2").show();
+			setTimeout(function() {
+				$('.page2').animate({ 'top': '-200%' }, 3000);
+			}, 1500)
+		}, 2500);
+	</script>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1, maximum-scale=1,,user-scalable=no">
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<title>converse</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class=" page3 face " id="page3">
+			<div class="container">
+				<div class="bg">
+					<img src="img/man.png" />
+				</div>
+				<div class="pic" id="view"></div>
+				<div class="page page3Container">
+					<div class="cueText">
+						<p>请输入小于<span>10</span>个中文字</p>
+					</div>
+					<form class="personInfo2">
+						<div class="top">
+							<!--<input type="hidden" value="" />-->
+							<p>我是<input class="text1 text" type="text">，</p>
+							<p>不是谁都懂我的<input class="text2 text" type="text">，</p>
+							<p>但这正是让我成为"我"的原因。</p>
+						</div>
+						<div class="bottom">
+							<p>就像这双有表情的鞋</p>
+							<p>不是谁都理解那道弧度的存在</p>
+							<p>不懂？</p>
+							<p>那就<input class="text3 text" type="text">吧。</p>
+						</div>
+						<input  type="submit" id="submitBtm" />
+
+					</form>
+					<div class="footerBtn">
+						<img src="img/photoword/reset.png" class="footerBtnLeft">
+
+						<label class="footerBtnRightLabel"><img src="img/photoword/generate.png" class="footerBtnRight"></label>
+					</div>
+					<div class="popup ">
+						<label class="modal modal1">
+							<img src="img/photoword/head.png">
+							<!--<input type="file" accept="image/*" capture="camera"style="display: none">-->
+							<input id="gocamera" style="display: none">
+
+						</label>
+						<div class="hall">
+							<div class="hpic">
+								<img src="img/hpic.png"/>
+							</div>
+							<a href="rule.html" class="activity">
+								<img src="img/hlink.png" />
+							</a>
+						</div>
+						<div class="side">
+							<img src="img/photoword/side.png"/>
+						</div>
+					</div>
+					<div class="popup2 hidden">
+						<div class=" modal modal2 ">
+							<img src="img/photoword/he.png">
+						</div>
+						<div class="inputText">
+							<img src="img/photoword/text.png"/>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="page page4 hidden">
+			<div class="bg pos">
+				<img src="img/camera/Brightness-Contrast-1.png" />
+			</div>
+			<div class="picture" id="clipArea"></div>
+			<div class="backBtm cBtm">
+				<img src="img/camera/back.png" />
+			</div>
+			<div class="goBtm cBtm" id="goBtm">
+				<img src="img/camera/ok.png" />
+			</div>
+			<div class="popup" id="handHidden">
+				<div class="logo">
+					<img src="img/camera/ti.png" />
+				</div>
+				<div class="headText">
+					<img src="img/camera/tihand.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/hammer.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/PhotoClip.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var pc = new PhotoClip('#clipArea', {
+			outputSize: 140,
+			//adaptive: ['60%', '80%'],
+			file: '#gocamera',
+			view: '#view', //显示截取后图像的容器的选择器或者DOM对象。
+			ok: '#goBtm', //确认截图按钮的选择器或者DOM对象。
+			//img: 'img/mm.jpg',
+			loadStart: function() {
+				//开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
+				console.log('开始读取照片');
+			},
+			//加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
+			loadComplete: function() {
+
+				$('.page4').show().siblings().hide();
+				
+				$('.page4 .logo').addClass('logoHand');
+				
+				$('.page4 .headText').addClass('logoText');
+
+				console.log('照片读取完成');
+			},
+			//
+			done: function(dataURL) {
+				console.log(dataURL);
+
+				$('.face').show().siblings().hide();
+
+				$('.popup').hide();
+
+				$('.popup2').show();
+				
+				$('.page3 .popup2 .inputText').addClass('ani');
+			},
+			fail: function(msg) {
+				alert(msg);
+			}
+		});
+
+		$('.popup2').click(function() {
+
+			$(this).hide();
+
+			$('.text1').focus();
+			$('.cueText').show();
+
+		})
+		
+		var handHidden = document.getElementById('handHidden');
+	
+			handHidden.addEventListener('touchstart',function(){
+				
+				$(this).hide();
+			})
+			
+			
+		$('.page3 .popup').click(function(){
+			
+			$('.page3 .popup .activity').hide();
+			
+			$('.page3 .popup .side').show();
+			
+			$('.page3 .popup .side').addClass('sideAni');
+			
+			setTimeout(function(){
+				
+				$('#gocamera').attr('type','file');
+				
+			})
+			
+			
+			
+			
+		})
+			//显示
+
+		var length = [5, 5, 8]
+
+		$('.personInfo2 .text').each(function(index) {
+
+			this.onfocus = function() {
+
+				$('.cueText').find('span').html(length[index]);
+			}
+		})
+
+		$(".text").blur(function() {
+			
+			if(allInput($('.text'))) {
+				
+				$('.cueText').hide();
+				
+			}
+		});
+
+		function allInput(val) {
+
+			for(var i = 0; i < val.length; i++) {
+				if(val[i].value == "") {
+					return false;
+				}
+			}
+			return true;
+		}
+	</script>
+
+</html>
